@@ -1,0 +1,12 @@
+rosnode kill base_link_to_localizer
+rosnode kill can_status_translator
+rosnode kill map_to_mobility
+rosnode kill op_global_planner_no_output
+rosnode kill points_map_loader
+rosnode kill pose_relay
+rosnode kill vector_map_loader
+rosnode kill vel_relay
+rosnode kill voxel_grid_filter
+rosnode kill wf_sim_autorunner
+rosnode kill wf_simulator
+rosnode kill world_to_map
