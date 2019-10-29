@@ -25,14 +25,14 @@ void WfSimAutorunner::register_subscribers(){
 
 void WfSimAutorunner::lane_waypoints_array_cb(const autoware_msgs::LaneArray& msg){
     if(!msg.lanes.empty()){
-        ROS_WARN("STEP2 DONE");
+        ROS_WARN("Global path is created");
         ros_autorunner_.step_info_list_[STEP(3)].is_prepared = true;
     }
 }
 
 void WfSimAutorunner::local_trajectories_cb(const autoware_msgs::LaneArray& msg){
     if(!msg.lanes.empty()){
-        ROS_WARN("STEP3 DONE");
+        ROS_WARN("Local trajectories are created");
         ros_autorunner_.step_info_list_[STEP(4)].is_prepared = true;
     }
 }
@@ -41,14 +41,14 @@ void WfSimAutorunner::behavior_state_cb(const visualization_msgs::MarkerArray& m
     std::string state = msg.markers.front().text;
     ROS_WARN("Behavior State %s", state.c_str());
     if(!msg.markers.empty() && state.find(std::string("Forward"))!=std::string::npos){
-        ROS_WARN("STEP5 DONE");
+        ROS_WARN("Behvior state is set to forward");
         ros_autorunner_.step_info_list_[STEP(6)].is_prepared = true;
     }
 }
 
 void WfSimAutorunner::twist_raw_cb(const geometry_msgs::TwistStamped& msg){
     if(msg.twist.linear.x > 0){
-        ROS_WARN("STEP6 DONE");
+        ROS_WARN("Vehicle target values are published start");
         ros_autorunner_.step_info_list_[STEP(7)].is_prepared = true;
     }
 }

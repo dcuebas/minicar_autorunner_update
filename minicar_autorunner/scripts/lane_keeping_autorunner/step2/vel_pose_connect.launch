@@ -6,7 +6,7 @@
   <!-- /current_velocity -->
   <arg name="topic_twist_stamped" default="" />
   <!-- Simulation Mode -->
-  <arg name="sim_mode" default="true" />
+  <arg name="sim_mode" default="false" />
 
   <group unless="$(arg sim_mode)">
     <node pkg="autoware_connector" type="can_status_translator" name="can_status_translator" output="log" />

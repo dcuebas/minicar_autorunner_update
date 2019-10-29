@@ -7,6 +7,5 @@
 	<include file="$(arg scripts_dir)/map_loader.launch" />
 	<!--<include file="$(arg scripts_dir)/lidar_vlp16.launch" />-->
 	<include file="$(arg scripts_dir)/voxel_grid_filter.launch" />
-	<include file="$(arg scripts_dir)/ndt_matching.launch" />		
-	<include file="$(arg scripts_dir)/vel_pose_connect.launch" />
+	<include file="$(arg scripts_dir)/ndt_matching.launch" />			
 </launch>

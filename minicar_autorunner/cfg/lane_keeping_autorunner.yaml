@@ -1,5 +1,5 @@
-total_step_num: 2
-terminate_script_path: "/home/hypark/minicar_ws/src/minicar_autorunner/scripts/lane_keeping_autorunner/terminate.sh"
+total_step_num: 7
+terminate_script_path: "~/minicar_ws/src/minicar_autorunner/scripts/lane_keeping_autorunner/terminate.sh"
 # step_# : 
 #     [0] pacakge name
 #     [1] target name( node name or launch script name )
@@ -7,5 +7,10 @@ terminate_script_path: "/home/hypark/minicar_ws/src/minicar_autorunner/scripts/l
 #     [3] state that check constraint topic or not ( "true" or "false" )
 #     [4] target type( RUN or LAUNCH )
 
-step_1: ["teleop_twist_keyboard", "teleop_twist_keyboard.py", "true", "false", "RUN"]
-step_2: ["ros_test", "ros_test.launch", "false", "true", "LAUNCH"]
+step_1: ["minicar_autorunner", "wf_sim_step1.launch", "true", "false", "LAUNCH"]
+step_2: ["minicar_autorunner", "wf_sim_step2.launch", "true", "true", "LAUNCH"]
+step_3: ["minicar_autorunner", "wf_sim_step3.launch", "true", "true", "LAUNCH"]
+step_4: ["minicar_autorunner", "wf_sim_step4.launch", "false", "true", "LAUNCH"]
+step_5: ["minicar_autorunner", "wf_sim_step5.launch", "true", "false", "LAUNCH"]
+step_6: ["minicar_autorunner", "wf_sim_step6.launch", "true", "true", "LAUNCH"]
+step_7: ["minicar_autorunner", "wf_sim_step7.launch", "false", "true", "LAUNCH"]
