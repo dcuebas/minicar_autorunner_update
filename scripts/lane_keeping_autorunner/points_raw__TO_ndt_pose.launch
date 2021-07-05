@@ -1,0 +1,13 @@
+<launch>
+	<arg name="scripts_dir" default="$(find minicar_autorunner)/scripts/lane_keeping_autorunner/only_ndt_matching"/>
+
+	<include file="$(arg scripts_dir)/map_tf.launch"/>
+	<!--<node pkg="" type="" name="" args=""/>-->
+	<include file="$(arg scripts_dir)/map_loader.launch" />
+	<include file="$(arg scripts_dir)/voxel_grid_filter.launch"/>		
+	<include file="$(arg scripts_dir)/ndt_matching.launch"/>
+	<include file="$(arg scripts_dir)/ndt_filter.launch"/>
+	<include file="$(arg scripts_dir)/vel_pose_connect.launch" />
+
+
+</launch>

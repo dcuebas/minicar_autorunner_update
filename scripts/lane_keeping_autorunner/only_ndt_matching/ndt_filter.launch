@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="max_velocity" default="2.0" />
+  <arg name="min_velocity" default="0" />
+  <arg name="history_size" default="100" />
+  
+
+  <node pkg="lidar_localizer" type="ndt_filter" name="ndt_filter" output="log">
+    <param name="max_velocity" value="$(arg max_velocity)" />
+    <param name="min_velocity" value="$(arg min_velocity)" />
+    <param name="history_size" value="$(arg history_size)" />
+  </node>
+
+</launch>

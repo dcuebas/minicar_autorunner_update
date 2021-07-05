@@ -1,0 +1,4 @@
+<launch>
+    <rosparam command="load" file="/home/nvidia/minicar_ws/src/minicar_autorunner/cfg/ndt_matching_only.yaml" />
+    <node pkg="minicar_autorunner" type="ndt_matching_only" name="ndt_matching_only" output="screen" />
+</launch>
