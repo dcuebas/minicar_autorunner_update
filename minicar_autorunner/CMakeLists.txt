@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(minicar_autorunner)
 
-set(ROS_AUTORUNNER_LIB "/home/hypark/minicar_ws/src/ros_autorunner_lib")
+set(ROS_AUTORUNNER_LIB "/home/nvidia/minicar_ws/src/ros_autorunner_lib")
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
@@ -234,4 +234,15 @@ target_link_libraries(wf_sim_autorunner
   ros_autorunner_lib
   #${catkin_EXPORTED_TARGETS}
   #autoware_msgs_generate_messages_cpp
+)
+
+add_executable(dual_lane_keeping_autorunner
+  include/dual_lane_keeping_autorunner/dual_lane_keeping_autorunner.h
+  src/dual_lane_keeping_autorunner/dual_lane_keeping_autorunner_node.cpp
+  src/dual_lane_keeping_autorunner/dual_lane_keeping_autorunner.cpp
+)
+add_dependencies(dual_lane_keeping_autorunner ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(dual_lane_keeping_autorunner
+  ${catkin_LIBRARIES}
+  ros_autorunner_lib
 )

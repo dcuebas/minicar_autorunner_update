@@ -1,9 +1,9 @@
 <launch>
     <node pkg="map_file" type="vector_map_loader" name="vector_map_loader" args="
-	    /home/hypark/map/vector_map/190909_rubis_track_2/dtlane.csv 
-	    /home/hypark/map/vector_map/190909_rubis_track_2/idx.csv 
-	    /home/hypark/map/vector_map/190909_rubis_track_2/lane.csv 
-	    /home/hypark/map/vector_map/190909_rubis_track_2/node.csv 
-	    /home/hypark/map/vector_map/190909_rubis_track_2/point.csv"/>
-	<node pkg="map_file" type="points_map_loader" name="points_map_loader" args="noupdate /home/hypark/map/points_map/190925_rubis_track.pcd"/>
+	    /home/nvidia/autoware_files/map/vector_map/210430_rubis_track_v2/dtlane.csv 
+	    /home/nvidia/autoware_files/map/vector_map/210430_rubis_track_v2/idx.csv 
+	    /home/nvidia/autoware_files/map/vector_map/210430_rubis_track_v2/lane.csv 
+	    /home/nvidia/autoware_files/map/vector_map/210430_rubis_track_v2/node.csv 
+	    /home/nvidia/autoware_files/map/vector_map/210430_rubis_track_v2/point.csv"/>
+	<node pkg="map_file" type="points_map_loader" name="points_map_loader" args="noupdate /home/nvidia/autoware_files/map/points_map/autoware-210426_from0422_voxel5_v5.pcd"/>
 </launch>

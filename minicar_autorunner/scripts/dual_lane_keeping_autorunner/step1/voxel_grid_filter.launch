@@ -1,13 +1,13 @@
 <launch>
   <arg name="sync" default="false" />
-  <arg name="node_name" default="voxel_grid_filter_param" />
-  <arg name="node_type" default="voxel_grid_filter_param" />
+  <arg name="node_name" default="voxel_grid_filter" />
+  <arg name="node_type" default="voxel_grid_filter" />
   <arg name="points_topic" default="points_raw" />
   <arg name="output_log" default="false" />
   <!-- Voxel Leaf Size -->
   <arg name="voxel_leaf_size" default="0.1" />
   <!-- Measurement Range -->
-  <arg name="measurement_range" default="5" />
+  <arg name="measurement_range" default="3" />
 
   <node pkg="points_downsampler" name="$(arg node_name)" type="$(arg node_type)">
     <param name="points_topic" value="$(arg points_topic)" />
